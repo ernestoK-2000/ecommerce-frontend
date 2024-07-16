@@ -1,0 +1,12 @@
+<div>
+    <app-toolbar></app-toolbar>
+    <div style="height: 64px;"></div>
+    <div [@routeAnimations]="getRouteAnimationData()">
+        <router-outlet></router-outlet> 
+    </div>
+    
+</div>
+<div>
+    <div style="height: 64px;"></div>
+    <app-footer></app-footer>    
+</div>

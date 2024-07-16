@@ -1,0 +1,20 @@
+<div style="position: relative;"  class="card box-shadow">
+    <div class="img-container">
+        <img [src]="img" alt="product">
+    </div>
+    
+    <div class="card-text">
+        <span class="title">{{title}}</span>
+        <div class="rating">
+            <ng-icon [name]="rate < 0.25 ? 'matStarBorder' : rate < 0.75 ? 'matStarHalf' : 'matStar'"></ng-icon>
+            <ng-icon [name]="rate < 1.25 ? 'matStarBorder' : rate < 1.75 ? 'matStarHalf' : 'matStar'"></ng-icon>
+            <ng-icon [name]="rate < 2.25 ? 'matStarBorder' : rate < 2.75 ? 'matStarHalf' : 'matStar'"></ng-icon>
+            <ng-icon [name]="rate < 3.25 ? 'matStarBorder' : rate < 3.75 ? 'matStarHalf' : 'matStar'"></ng-icon>
+            <ng-icon style="margin-right: 8px;" [name]="rate < 4.25 ? 'matStarBorder' : rate < 4.75 ? 'matStarHalf' : 'matStar'"></ng-icon>
+            <span class="rate-count">{{rateCount}}</span>
+        </div>
+        <h2 class="price">$<span>{{price}}</span></h2>
+        <!-- <span class="description">{{description}}</span> -->
+    </div>
+    
+</div>

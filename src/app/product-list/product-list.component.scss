@@ -1,0 +1,14 @@
+.products{
+    padding: 0 5%;
+    position: relative;
+}
+.product-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+h1{
+    color: var(--color-text-highlight);
+}

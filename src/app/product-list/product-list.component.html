@@ -1,0 +1,17 @@
+<div class="products">
+    <ngx-spinner bdColor = "rgba(0,0,0,0.3)" size = "default" color = "#7A63FF" type = "ball-atom" [fullScreen] = "false"></ngx-spinner>
+    <h1 class="text-shadow">Products</h1>
+    <div class="product-list">
+        <p *ngIf="products.length === 0">No hay productos disponibles.</p>
+        <app-card
+            *ngFor="let p of products"
+            [description]="p.description"
+            [title]="p.title"
+            [img]="p.image"
+            [rate]="p.rating.rate"
+            [rateCount]="p.rating.count"
+            [price]="p.price"
+        ></app-card>
+    </div>
+</div>
+

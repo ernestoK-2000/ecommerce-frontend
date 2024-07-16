@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+    --color-text: #E7E7E7;
+    --color-text-highlight: #7A63FF;
+    --color-background: #1E1E1E;
+    --color-background-contrast: #6A6565;
+    --color-extra: #74E0EF;
+    --color-background-dark: #111;
+}
+
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+.active{
+    color: var(--color-text-highlight);
+}
+
+.text-shadow{
+    text-shadow: 3px 3px 7px black;
+}
+
+.box-shadow{
+    box-shadow: 3px 3px 5px black;
+}
