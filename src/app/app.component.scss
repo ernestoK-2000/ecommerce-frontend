@@ -1,11 +1,11 @@
-:root{
-    position: relative;
+:root {
+  position: relative;
 }
 
-:host{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100vh;
-    overflow-x: hidden;
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  overflow-x: hidden;
 }

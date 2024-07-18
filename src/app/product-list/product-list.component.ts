@@ -4,17 +4,17 @@ import { CommonModule } from '@angular/common';
 import { ProductsService } from '../products.service';
 import { NgxSpinnerComponent, NgxSpinnerService } from 'ngx-spinner';
 
-interface IProduct{
-  id: number,
-  title: string,
-  price: number,
-  description: string,
-  category: string,
-  image: string,
+interface IProduct {
+  id: number;
+  title: string;
+  price: number;
+  description: string;
+  category: string;
+  image: string;
   rating: {
-    rate: number,
-    count: number
-  }
+    rate: number;
+    count: number;
+  };
 }
 
 @Component({
@@ -22,22 +22,25 @@ interface IProduct{
   standalone: true,
   imports: [CardComponent, CommonModule, NgxSpinnerComponent],
   templateUrl: './product-list.component.html',
-  styleUrl: './product-list.component.scss'
+  styleUrl: './product-list.component.scss',
 })
 export class ProductListComponent {
-  products: IProduct[] = []
+  products: IProduct[] = [];
 
-  constructor(private productsService: ProductsService, private spinner: NgxSpinnerService){
-    spinner.show()
+  constructor(
+    private productsService: ProductsService,
+    private spinner: NgxSpinnerService
+  ) {
+    spinner.show();
     productsService.getProducts().subscribe({
-      next: data => {
+      next: (data) => {
         this.products = data;
       },
-      error: error => {
+      error: (error) => {
         console.error(error);
-        spinner.hide()
+        spinner.hide();
       },
-      complete: () => spinner.hide() 
-    })
+      complete: () => spinner.hide(),
+    });
   }
 }

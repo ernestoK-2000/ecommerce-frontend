@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { NgIcon, provideIcons } from '@ng-icons/core';
-import {matMenu, matClose} from '@ng-icons/material-icons/baseline'
+import { matMenu, matClose } from '@ng-icons/material-icons/baseline';
 
 @Component({
   selector: 'app-toolbar',
@@ -10,7 +10,7 @@ import {matMenu, matClose} from '@ng-icons/material-icons/baseline'
   imports: [NgIcon, CommonModule, RouterModule],
   templateUrl: './toolbar.component.html',
   styleUrl: './toolbar.component.scss',
-  viewProviders: [provideIcons({matMenu, matClose})]
+  viewProviders: [provideIcons({ matMenu, matClose })],
 })
 export class ToolbarComponent {
   sideMenu!: HTMLElement;

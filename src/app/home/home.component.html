@@ -1,1 +1,18 @@
-<p>home works!</p>
+<div id="section-presentation">
+  <ngx-particles
+    id="tsparticles-custom"
+    [options]="particlesOptions"
+    (particlesLoaded)="particlesLoaded($event)"
+  ></ngx-particles>
+  <div class="layer"></div>
+
+  <div class="content-presentation observable">
+    <div class="horizontal-layer"></div>
+    <span>Discover your</span>
+    <h1 data-text="Universal Style">Universal Style</h1>
+    <br />
+    <button (click)="onCallToAction()">Shop now</button>
+  </div>
+</div>
+
+<app-home-base></app-home-base>

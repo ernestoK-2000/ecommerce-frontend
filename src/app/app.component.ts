@@ -9,21 +9,25 @@ import { slideInAnimation } from './animations';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, FooterComponent, MainContentComponent, ToolbarComponent],
+  imports: [
+    CommonModule,
+    RouterOutlet,
+    FooterComponent,
+    MainContentComponent,
+    ToolbarComponent,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
-  animations: [
-    slideInAnimation
-  ]
+  animations: [slideInAnimation],
 })
 export class AppComponent {
   title = 'ecommerce-frontend';
 
-  constructor(private contexts: ChildrenOutletContexts){
+  constructor(private contexts: ChildrenOutletContexts) {}
 
-  }
-
-  getRouteAnimationData(){
-    return this.contexts.getContext('primary')?.route?.snapshot?.data?.['animation'];
+  getRouteAnimationData() {
+    return this.contexts.getContext('primary')?.route?.snapshot?.data?.[
+      'animation'
+    ];
   }
 }
